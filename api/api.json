@@ -1,0 +1,67 @@
+{
+    "about":[
+        {"text":"No todos los regalos tienen que ser iguales. En Tu Regalo Original creemos que encontrar un regalo especial también es parte de la experiencia. Por eso creamos y seleccionamos objetos únicos, originales y con personalidad, pensados para sorprender, compartir y hacer que cada ocasión sea un poquito más especial.\n\nEncontrá figuras, mates, accesorios y diseños inspirados en personajes, películas, series y todo aquello que nos gusta. Porque a veces el regalo perfecto no es el más grande ni el más caro, sino ese que hace que alguien diga: ¡Esto es totalmente para mí!"}
+    ],
+    "products": [
+    {
+      "name": "Mate Mafalda",
+      "description": "Mate inspirado en el clásico personaje Mafalda, ideal para disfrutar unos buenos mates con un diseño divertido y original.",
+      "category": "mates",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787737785/mate_mafalda.jpg","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/Mate_Mafalda_(con_Mo__o).obj"]
+    },
+    {
+      "name": "Mate Gato Alicia",
+      "description": "Mate con diseño de gato inspirado en Alicia, una pieza original y decorativa para acompañar tus momentos de mate.",
+      "category": "mates",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787737733/gato_alicia_mate.jpg","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/GATO%20ALICIA.obj"]
+    },
+    {
+      "name": "Cabeza Deadpool",
+      "description": "Práctico y original porta auriculares con diseño de la cabeza de Deadpool. Ideal para mantener tus auriculares ordenados y darle personalidad a tu escritorio.",
+      "category": "porta auriculares",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787731747/cabeza_deadpool.jpg","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/deadpool%20auri.obj"]
+    },
+    {
+      "name": "Dobby",
+      "description": "Figura decorativa inspirada en Dobby, el entrañable elfo doméstico del universo de Harry Potter. Ideal para coleccionistas y fanáticos.",
+      "category": "figuras",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787737688/dobby.jpg","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/dobby.obj"]
+    },
+    {
+      "name": "Harry Potter (Funko)",
+      "description": "Figura de Harry Potter con estilo Funko, perfecta para coleccionar, decorar tu espacio o regalar a un fanático de la saga.",
+      "category": "figuras",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787737725/harry_funko.jpg","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/harry%20funko.obj"]
+    },
+    {
+      "name": "Gato Alicia",
+      "description": "Figura decorativa inspirada en el universo de Alicia, con un simpático diseño de gato ideal para coleccionistas y amantes de las piezas originales.",
+      "category": "figuras",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787731665/gato_alicia.jpg","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/eva(WALL-E).obj"]
+    },
+    {
+      "name": "Mate Goku",
+      "description": "Mate inspirado en Goku, ideal para los fanáticos de Dragon Ball que quieren combinar su pasión por la serie con el clásico ritual del mate.",
+      "category": "mates",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787737775/mate_goku.jpg","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/MATEGOKU.obj"]
+    },
+    {
+      "name": "Messi",
+      "description": "Original porta joystick inspirado en Lionel Messi, pensado para mantener tu control organizado mientras le das un toque futbolero a tu espacio gamer.",
+      "category": "portajoystick",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787737793/messi_2.png","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/messi%20porta%20joystick.obj"]
+    },
+    {
+      "name": "Wall-E",
+      "description": "Figura decorativa inspirada en Wall-E, el simpático robot de la película de Pixar. Una pieza ideal para coleccionistas y amantes de la animación.",
+      "category": "figuras",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787737819/wall-e.jpg","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/wall-e.obj"]
+    },
+    {
+      "name": "EVA",
+      "description": "Figura decorativa inspirada en EVA, la robot exploradora de Wall-E. Ideal para acompañar una colección o decorar cualquier espacio.",
+      "category": "figuras",
+      "photos": ["https://res.cloudinary.com/kbr3qjni/image/upload/v1787740619/20260109_162330_mfnr.jpg","https://pub-3d529b400eb6415cbf58defdd54bdb95.r2.dev/eva(WALL-E).obj"]
+    }
+  ]
+}
