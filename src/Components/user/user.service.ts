@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { user } from '../../entities/user.entity';
 import { Repository } from 'typeorm';
@@ -13,28 +13,33 @@ export class UserService {
         private jwtService: JwtService,
     ){}
 
-    async auth (body:any) {
-        const user = await this.userRepo.findOneBy(
-           {
-                email: body.email
-           }
-        )
+    async auth(body: any) {
+        const user = await this.userRepo.findOneBy({
+            email: body.email,
+        });
 
-        if(!user){
-            throw new Error('usuario inexistente')
+        if (!user) {
+            console.log('LOGIN: usuario no encontrado');
+            throw new UnauthorizedException('Credenciales inválidas');
         }
 
-        const ismatch = await bcrypt.compare(body.pass, user.pass)
-        if(ismatch){
-            const payload = { sub: user.id}
-            return {
-                access_token: await this.jwtService.signAsync(payload)
-            };
+        const ismatch = await bcrypt.compare(body.pass, user.pass);
 
-        } else {
-            return 'Wrong credential'
+        if (!ismatch) {
+            console.log('LOGIN: contraseña incorrecta');
+            throw new UnauthorizedException('Credenciales inválidas');
         }
 
+        console.log('LOGIN: credenciales correctas');
+
+        const payload = { sub: user.id };
+        const token = await this.jwtService.signAsync(payload);
+
+        return {
+            id: user.id,
+            email: user.email,
+            token,
+        };
     }
 
     async createUser(body: any){
@@ -46,17 +51,20 @@ export class UserService {
     }
     
     
-    async tokenValidation(token: string){
-        const payload = this.jwtService.verify(token);
+    async tokenValidation(token: string) {
+        try {
+            const payload = this.jwtService.verify(token);
 
-        const user = await this.userRepo.findOne({
-            where:{
-                email: payload.email
+            const user = await this.userRepo.findOne({
+                where: { id: payload.sub },
+                });
+
+            if (!user) {
+            throw new UnauthorizedException('Usuario no válido');
             }
-        })
-        if(user){
-            const newToken = this.jwtService.sign({user: 'user'});
-            return newToken;
+            return true;
+        } catch {
+            throw new UnauthorizedException('Token inválido o vencido');
         }
     }
 
